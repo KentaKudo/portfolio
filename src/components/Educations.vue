@@ -12,7 +12,9 @@
         <div>{{ education.major }}</div>
       </div>
       <div class="resume-date text-md-right">
-        <span>{{ education.startDate }} – {{ education.endDate }}</span>
+        <span class="text-primary"
+          >{{ education.startDate }} – {{ education.endDate }}</span
+        >
       </div>
     </div>
   </div>
@@ -30,13 +32,12 @@ export default {
           degree: "Bachelor of Engineering",
           major: "Aeronautical and Astronautical Engineering",
           startDate: "April 2011",
-          endDate: "March 2015"
-        }
-      ]
+          endDate: "March 2015",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>

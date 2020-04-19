@@ -10,11 +10,10 @@ export default {
   props: {
     id: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>
