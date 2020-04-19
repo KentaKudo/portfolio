@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Interests</h2>
+    <h2 class="mb-5">Interests</h2>
     <p>{{ interest }}</p>
   </div>
 </template>

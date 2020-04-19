@@ -1,19 +1,20 @@
 <template>
   <div>
-    <h2>Awards &amp; Certifications</h2>
-    <ul>
+    <h2 class="mb-5">Awards &amp; Certifications</h2>
+    <ul class="fa-ul mb-0">
       <li>
-        <i></i>Coursera: Machine Learning
+        <i class="fa-li fa fa-trophy text-wraning"></i>
+        Coursera: Machine Learning
       </li>
       <li>
-        <i></i>
+        <i class="fa-li fa fa-trophy text-wraning"></i>
         Diploma: Project
         <a
           href="https://github.com/matsuolab-edu/dl4us"
         >DL4US (Deep Learning for All of Us)</a>
       </li>
       <li>
-        <i></i>
+        <i class="fa-li fa fa-trophy text-wraning"></i>
         Design Lab:
         <a
           href="https://trydesignlab.com/certificates/design-101/KentaKudo/"

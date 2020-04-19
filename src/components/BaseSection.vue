@@ -1,5 +1,5 @@
 <template>
-  <section :id="id">
+  <section :id="id" class="resume-section p-3 p-lg-5 d-flex d-column">
     <slot></slot>
   </section>
 </template>

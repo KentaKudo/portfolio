@@ -1,13 +1,17 @@
 <template>
   <div>
-    <h2>Education</h2>
-    <div v-for="education in educations" :key="education.id">
-      <div>
-        <h3>{{ education.faculty }}</h3>
-        <div>{{ education.degree }}</div>
+    <h2 class="mb-5">Education</h2>
+    <div
+      v-for="education in educations"
+      :key="education.id"
+      class="resume-item d-flex flex-column flex-md-row mb-5"
+    >
+      <div class="resume-content mr-auto">
+        <h3 class="mb-0">{{ education.faculty }}</h3>
+        <div class="subheading mb-3">{{ education.degree }}</div>
         <div>{{ education.major }}</div>
       </div>
-      <div>
+      <div class="resume-date text-md-right">
         <span>{{ education.startDate }} – {{ education.endDate }}</span>
       </div>
     </div>

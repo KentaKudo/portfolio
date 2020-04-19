@@ -1,23 +1,23 @@
 <template>
   <nav>
-    <ul class="nav">
+    <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link js-scroll-trigger" href="#about">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#education">Education</a>
+        <a class="nav-link js-scroll-trigger" href="#education">Education</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#interests">Interests</a>
+        <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#awards">Awards</a>
+        <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
       </li>
     </ul>
   </nav>

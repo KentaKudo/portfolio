@@ -1,14 +1,18 @@
 <template>
   <div>
-    <h2>Experience</h2>
-    <div v-for="job in experiences" :key="job.description">
-      <div>
-        <h3>{{ job.position }}</h3>
-        <div>{{ job.company }}</div>
+    <h2 class="mb-5">Experience</h2>
+    <div
+      v-for="job in experiences"
+      :key="job.description"
+      class="resume-item d-flex flex-column flex-md-row mb-5"
+    >
+      <div class="resume-content mr-auto">
+        <h3 class="mb-0">{{ job.position }}</h3>
+        <div class="subheading mb-3">{{ job.company }}</div>
         <p>{{ job.description }}</p>
       </div>
-      <div>
-        <span>{{ job.startDate }} – {{ job.endDate }}</span>
+      <div class="resume-date text-md-right">
+        <span class="text-primary">{{ job.startDate }} – {{ job.endDate }}</span>
       </div>
     </div>
   </div>
