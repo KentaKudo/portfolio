@@ -3,7 +3,7 @@
     <h1 class="mb-0">{{ name }}</h1>
     <p class="lead mb-5">{{ about }}</p>
     <div class="subheading mb-4">
-      <a href="./cv_2019091.pdf" download>Download CV</a>
+      <a href="./cv_201901.pdf" download>Download CV</a>
     </div>
     <ul class="list-inline list-social-icons mb-0">
       <li v-for="social in socials" :key="social.name" class="list-inline-item">
@@ -31,41 +31,41 @@ export default {
         {
           name: "facebook",
           href: "https://www.facebook.com/kentakudo.kenta",
-          class: "fa-facebook",
+          class: "fa-facebook"
         },
         {
           name: "twitter",
           href: "https://twitter.com/_______K_K_",
-          class: "fa-twitter",
+          class: "fa-twitter"
         },
         {
           name: "linkedin",
           href: "https://www.linkedin.com/in/kenta-kudo-6a4b15a8/",
-          class: "fa-linkedin",
+          class: "fa-linkedin"
         },
         {
           name: "github",
           href: "https://github.com/KentaKudo",
-          class: "fa-github",
+          class: "fa-github"
         },
         {
           name: "medium",
           href: "https://medium.com/@_______K_K_",
-          class: "fa-medium",
+          class: "fa-medium"
         },
         {
           name: "email",
           href: "mailto:yd37574@gmail.com",
-          class: "fa-envelope-o",
-        },
-      ],
+          class: "fa-envelope-o"
+        }
+      ]
     };
   },
   computed: {
     name() {
       return `${this.firstName} ${this.lastName}`;
-    },
-  },
+    }
+  }
 };
 </script>
 
