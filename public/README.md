@@ -1,1 +1,0 @@
-# KentaKudo.github.io
