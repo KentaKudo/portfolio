@@ -51,9 +51,7 @@ export default {
     Educations,
     Skills,
     Awards,
-    Interests,
-  },
+    Interests
+  }
 };
 </script>
-
-<style></style>
