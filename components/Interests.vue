@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       interest:
-        "I embrace a minimalist lifestyle and keeping things in my life simple. I enjoy learning and experiencing new cultures and travelling the world is great fun. I also love developing my skills working on personal projects such as building deep learning models, designing my own website, and implementing original OS, which works on Raspberry Pi."
+        "I embrace a simple lifestyle. Learning and experiencing new things are great fun for me. Besides input from tech topics, I get inspiration from books, movies, music, exercise, food, and travel."
     };
   }
 };

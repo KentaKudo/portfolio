@@ -20,56 +20,42 @@ export default {
     return {
       skills: [
         {
-          category: "Infrastructure",
+          category: "Language",
           topics: [
-            "MySQL",
-            "GCP",
+            "Go – Advanced Level",
+            "PHP – Advanced Level",
+            "Swift – Advanced Level",
+            "Python – Intermediate Level",
+            "JavaScript – Intermediate Level"
+          ]
+        },
+        {
+          category: "Tools",
+          topics: [
             "Docker",
             "Kubernetes",
-            "Ansible",
-            "Terraform"
+            "Terraform",
+            "GCP",
+            "Apache Kafka",
+            "MySQL"
           ]
         },
         {
-          category: "Backend",
+          category: "Practices",
           topics: [
-            "PHP",
-            "Golang",
-            "Python",
-            "Object Oriented Programming",
-            "Design Pattern",
-            "SQL"
+            "Object-Oriented Programming",
+            "Test-Driven Development",
+            "Event-Driven Architecture",
+            "microservices",
+            "Design Pattern"
           ]
-        },
-        {
-          category: "Mobile",
-          topics: [
-            "iOS",
-            "Swift",
-            "Objective-C",
-            "Reactive Programming",
-            "MVVM Architecture"
-          ]
-        },
-        {
-          category: "Frontend",
-          topics: ["JavaScript", "React", "Vue", "KnockoutJS"]
         },
         {
           category: "Others",
-          topics: [
-            "Machine Learning",
-            "System Programming",
-            "Respberry Pi",
-            "Design",
-            "Agile"
-          ]
+          topics: ["Machine Learning", "System Programming"]
         }
       ]
     };
   }
 };
 </script>
-
-<style>
-</style>

@@ -3,7 +3,7 @@
     <h1 class="mb-0">{{ name }}</h1>
     <p class="lead mb-5">{{ about }}</p>
     <div class="subheading mb-4">
-      <a href="./cv_201901.pdf" download>Download CV</a>
+      <a href="./CV_202005.pdf" download>Download CV</a>
     </div>
     <ul class="list-inline list-social-icons mb-0">
       <li v-for="social in socials" :key="social.name" class="list-inline-item">
@@ -26,7 +26,7 @@ export default {
       firstName: "Kenta",
       lastName: "Kudo",
       about:
-        "Engineering graduate with 3.5+ years of Software Engineering experience. I love problem-solving and turning complicated issues into simplified solutions. I am a logical thinker, diligent, curious, and thrive on teamwork. Now I am looking for a new challenge with an exciting and growing company.",
+        "Engineering graduate with 5+ years of Software Engineering experience. I love problem solving, and transforming complicated issues into simple solutions. I am a logical thinker, diligent, curious, and collaborative. I am increasingly interested in frontend technology and its impact.",
       socials: [
         {
           name: "facebook",

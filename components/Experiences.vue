@@ -25,18 +25,26 @@ export default {
     return {
       experiences: [
         {
+          position: "Software Engineer",
+          company: "Utility Warehouse",
+          description:
+            "As a member of the payment platform team, rewriting the legacy system to the new system which is scalable and maintainable  with a user-friendly interface using the latest tech stack such as microservices in Go and Kubernetes is my main focus. Making the system regulation compliant is also our responsibility.",
+          startDate: "April 2019",
+          endDate: "Present"
+        },
+        {
           position: "Junior Backend Engineer",
           company: "Mercari UK",
           description:
-            "Mercari is an e-commerce buying and selling platform. In my role, I write microservices in Golang and deploy them using GAE, GCE, Kubernetes, and Spinnaker. I also develop large userbase applications written in PHP using OOP and TDD practices. Additionally, I deal with some sysadmin tasks such as running DB migrations and executing batch commands on production.",
+            "My main responsibility was to add features and functions to the large user-base applications communicating with PMs to make a consumer facing app that grows in the area. I made myself an expert of a PHP and Go developer using GCP platform with OOP and TDD practices.",
           startDate: "December 2016",
-          endDate: "Present"
+          endDate: "March 2019"
         },
         {
           position: "iOS Engineer",
           company: "Smart Tech Ventures",
           description:
-            "I developed the e-commerce app using MVC architecture in Swift and Objective-C. I also wrote and created from scratch a healthcare application introducing MVVM architecture and Reactive Programming",
+            "I developed the e-commerce app using MVC architecture in Swift and Objective-C. I also wrote and created from scratch a healthcare application introducing MVVM architecture and Reactive Programming.",
           startDate: "May 2015",
           endDate: "March 2017"
         }
