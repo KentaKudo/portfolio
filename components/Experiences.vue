@@ -1,30 +1,35 @@
+<style scoped></style>
+
 <template>
-  <div>
+  <fragment>
     <h2 class="mb-5">Experience</h2>
-    <div
-      v-for="job in experiences"
-      :key="job.description"
-      class="resume-item d-flex flex-column flex-md-row mb-5"
-    >
-      <div class="resume-content mr-auto">
-        <h3 class="mb-0">{{ job.position }}</h3>
-        <div class="subheading mb-3">{{ job.company }}</div>
-        <p>{{ job.description }}</p>
-      </div>
-      <div class="resume-date text-md-right">
-        <span class="text-primary">{{ job.startDate }} – {{ job.endDate }}</span>
-      </div>
-    </div>
-  </div>
+    <ul class="pl-0 mb-0">
+      <fragment v-for="exp in experiences" :key="exp.id">
+        <Card
+          :title="exp.position"
+          :subtitle="exp.company"
+          :description="exp.description"
+          :startDate="exp.startDate"
+          :endDate="exp.endDate"
+        />
+      </fragment>
+    </ul>
+  </fragment>
 </template>
 
 <script>
+import Card from "./Card";
+
 export default {
   name: "Experiences",
+  components: {
+    Card
+  },
   data() {
     return {
       experiences: [
         {
+          id: 3,
           position: "Software Engineer",
           company: "Utility Warehouse",
           description:
@@ -33,6 +38,7 @@ export default {
           endDate: "Present"
         },
         {
+          id: 2,
           position: "Junior Backend Engineer",
           company: "Mercari UK",
           description:
@@ -41,6 +47,7 @@ export default {
           endDate: "March 2019"
         },
         {
+          id: 1,
           position: "iOS Engineer",
           company: "Smart Tech Ventures",
           description:
@@ -53,6 +60,3 @@ export default {
   }
 };
 </script>
-
-<style>
-</style>

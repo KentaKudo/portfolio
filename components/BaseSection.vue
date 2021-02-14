@@ -1,6 +1,12 @@
+<style scoped>
+section {
+  margin-bottom: 9rem;
+}
+</style>
+
 <template>
-  <section :id="id" class="resume-section p-3 p-lg-5 d-flex d-column">
-    <slot></slot>
+  <section :id="id" class="d-flex flex-column">
+    <slot class="section"></slot>
   </section>
 </template>
 
@@ -10,10 +16,8 @@ export default {
   props: {
     id: {
       type: String,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 };
 </script>
-
-<style></style>

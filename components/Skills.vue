@@ -1,16 +1,18 @@
 <template>
-  <div>
+  <fragment>
     <h2 class="mb-5">Skills</h2>
     <div v-for="skill in skills" :key="skill.category">
-      <div class="subheading mb-3">{{ skill.category }}</div>
-      <ul class="fa-ul mb-3">
-        <li v-for="topic in skill.topics" :key="topic">
-          <i class="fa-li fa fa-check"></i>
+      <h4 class="mb-2">{{ skill.category }}</h4>
+      <ul class="fa-ul mb-4">
+        <li class="mb-1" v-for="topic in skill.topics" :key="topic">
+          <span class="fa-li">
+            <i class="fa fa-check"></i>
+          </span>
           {{ topic }}
         </li>
       </ul>
     </div>
-  </div>
+  </fragment>
 </template>
 
 <script>

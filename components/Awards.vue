@@ -1,35 +1,48 @@
+<style scoped>
+h2 {
+  word-break: break-all;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    word-break: normal;
+  }
+}
+</style>
+
 <template>
-  <div>
+  <fragment>
     <h2 class="mb-5">Awards &amp; Certifications</h2>
     <ul class="fa-ul mb-0">
-      <li>
+      <li class="mb-1">
         <i class="fa-li fa fa-trophy text-warning"></i>
         Coursera: Machine Learning
       </li>
-      <li>
+      <li class="mb-1">
         <i class="fa-li fa fa-trophy text-warning"></i>
         Diploma: Project
-        <a href="https://github.com/matsuolab-edu/dl4us"
-          >DL4US (Deep Learning for All of Us)</a
+        <Link href="https://github.com/matsuolab-edu/dl4us"
+          >DL4US (Deep Learning for All of Us)</Link
         >
       </li>
-      <li>
+      <li class="mb-1">
         <i class="fa-li fa fa-trophy text-warning"></i>
         Design Lab:
-        <a
-          href="https://trydesignlab.com/certificates/design-101/KentaKudo/"
-          target="_blank"
-          >Design 101</a
+        <Link href="https://trydesignlab.com/certificates/design-101/KentaKudo/"
+          >Design 101</Link
         >
       </li>
     </ul>
-  </div>
+  </fragment>
 </template>
 
 <script>
+import Link from "./Link";
+
 export default {
   name: "Awards",
+  components: {
+    Link
+  }
 };
 </script>
-
-<style></style>

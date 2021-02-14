@@ -24,14 +24,13 @@ export default {
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
-        href:
-          "https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900",
-        rel: "stylesheet"
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com"
       },
       {
+        rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i",
-        rel: "stylesheet"
+          "https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap"
       },
       {
         rel: "apple-touch-icon",
@@ -82,14 +81,14 @@ export default {
    */
   css: [
     "devicons/css/devicons.css",
-    "font-awesome/css/font-awesome.css",
+    "@fortawesome/fontawesome-free/css/all.css",
     "bootstrap/dist/css/bootstrap.css",
     "~/assets/styles/main.css"
   ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ["~/plugins/vue-mq.js", "~/plugins/vue-fragment.js"],
   /*
    ** Nuxt.js dev-modules
    */
@@ -105,7 +104,16 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {
+      const svgRule = config.module.rules.find(rule => rule.test.test(".svg"));
+
+      svgRule.test = /\.(png|jpe?g|gif|webp)$/;
+
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: ["babel-loader", "vue-svg-loader"]
+      });
+    }
   },
 
   target: "static"

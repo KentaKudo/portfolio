@@ -1,34 +1,43 @@
+<style scoped>
+.container {
+  padding: 0 2rem;
+  max-width: 540px;
+}
+
+@media (min-width: 768px) {
+  .nav-bar {
+    display: none !important;
+  }
+
+  #about {
+    height: 100vh;
+  }
+}
+</style>
+
 <template>
-  <div class="main-wrapper">
-    <div class="container">
-      <Navigation />
+  <div class="container">
+    <Navigation class="nav-bar" />
 
-      <div class="container-fluid p-0">
-        <BaseSection id="about">
-          <About class="my-auto" />
-        </BaseSection>
+    <BaseSection id="about">
+      <About />
+    </BaseSection>
 
-        <BaseSection id="experience">
-          <Experiences class="my-auto" />
-        </BaseSection>
+    <BaseSection id="experience">
+      <Experiences />
+    </BaseSection>
 
-        <BaseSection id="education">
-          <Educations class="my-auto" />
-        </BaseSection>
+    <BaseSection id="education">
+      <Educations />
+    </BaseSection>
 
-        <BaseSection id="skills">
-          <Skills class="my-auto" />
-        </BaseSection>
+    <BaseSection id="skills">
+      <Skills />
+    </BaseSection>
 
-        <BaseSection id="interests">
-          <Interests class="my-auto" />
-        </BaseSection>
-
-        <BaseSection id="awards">
-          <Awards class="my-auto" />
-        </BaseSection>
-      </div>
-    </div>
+    <BaseSection id="awards">
+      <Awards />
+    </BaseSection>
   </div>
 </template>
 
@@ -40,7 +49,6 @@ import Experiences from "@/components/Experiences";
 import Educations from "@/components/Educations";
 import Skills from "@/components/Skills";
 import Awards from "@/components/Awards";
-import Interests from "@/components/Interests";
 
 export default {
   components: {
@@ -50,8 +58,12 @@ export default {
     Experiences,
     Educations,
     Skills,
-    Awards,
-    Interests
+    Awards
   }
+  // computed: {
+  //   windowInnerWidth() {
+  //     return window.innerWidth;
+  //   }
+  // }
 };
 </script>
