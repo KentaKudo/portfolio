@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "KentaKudo&#39;s portfolio site source code",
+  "description": "👋 This is Kenta — Software Engineer based in London. ",
   "author": "Kenta Kudo",
   "private": true,
   "scripts": {
@@ -12,12 +12,12 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
+    "@nuxt/content": "^1.13.1",
     "bootstrap": "^4.4.1",
     "devicons": "^1.8.0",
     "jquery": "^3.5.0",
     "nuxt": "^2.0.0",
-    "popper.js": "^1.16.1",
-    "vue-mq": "^1.0.1"
+    "popper.js": "^1.16.1"
   },
   "devDependencies": {
     "vue-fragment": "^1.5.1",

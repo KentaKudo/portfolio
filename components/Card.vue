@@ -1,4 +1,24 @@
 <style scoped>
+h3,
+h4 {
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #343a40;
+}
+
+h3 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #868e96;
+  margin-bottom: 0;
+}
+
 .text-primary {
   color: #0c8ccc !important;
 }

@@ -5,6 +5,14 @@ img {
 }
 
 h1 {
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #343a40;
+
+  font-size: 5rem;
+  line-height: 4.5rem;
+
   left: 50%;
   transform: translate(-50%, -100%);
   text-align: center;
@@ -12,6 +20,9 @@ h1 {
 
 @media (min-width: 768px) {
   h1 {
+    font-size: 6rem;
+    line-height: 5.5rem;
+
     white-space: nowrap;
     transform: translate(-50%, 0);
   }

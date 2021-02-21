@@ -1,3 +1,32 @@
+<style scoped>
+h2,
+h4 {
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #343a40;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #868e96;
+  margin-bottom: 0;
+}
+</style>
+
 <template>
   <fragment>
     <h2 class="mb-5">Skills</h2>

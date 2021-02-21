@@ -1,10 +1,21 @@
 <style scoped>
 h2 {
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #343a40;
+
+  font-size: 3rem;
+  line-height: 3.5rem;
+
   word-break: break-all;
 }
 
 @media (min-width: 768px) {
   h2 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+
     word-break: normal;
   }
 }

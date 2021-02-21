@@ -1,3 +1,5 @@
+const SITE_URL = "https://kentakudo.com";
+
 export default {
   /*
    ** Headers of the page
@@ -19,10 +21,39 @@ export default {
         name: "description",
         content: process.env.npm_package_description || ""
       },
+      { property: "og:site_name", content: "Kenta Kudo" },
+      { hid: "og:type", property: "og:type", content: "website" },
+      { hid: "og:url", property: "og:url", content: SITE_URL },
+      { hid: "og:title", property: "og:title", content: "Kenta Kudo" },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content: process.env.npm_package_description || ""
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "/_nuxt/assets/img/Profile.png"
+      },
+      { name: "twitter:site", content: "@___________k_k_" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { hid: "twitter:url", name: "twitter:url", content: SITE_URL },
+      { hid: "twitter:title", name: "twitter:title", content: "Kenta Kudo" },
+      {
+        hid: "twitter:description",
+        name: "twitter:description",
+        content: process.env.npm_package_description || ""
+      },
+      {
+        hid: "twitter:image",
+        name: "twitter:image",
+        content: "/_nuxt/assets/img/Profile.png"
+      },
       { "http-equiv": "X-UA-Compatible", content: "IE=edge" }
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { hid: "canonical", rel: "canonical", href: SITE_URL },
       {
         rel: "preconnect",
         href: "https://fonts.gstatic.com"
@@ -88,7 +119,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["~/plugins/vue-mq.js", "~/plugins/vue-fragment.js"],
+  plugins: ["~/plugins/vue-fragment.js"],
   /*
    ** Nuxt.js dev-modules
    */
@@ -96,7 +127,17 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ["@nuxt/content"],
+  generate: {
+    async routes() {
+      const { $content } = require("@nuxt/content");
+      const files = await $content({ deep: true })
+        .only(["path"])
+        .fetch();
+
+      return files.map(file => (file.path === "/index" ? "/" : file.path));
+    }
+  },
   /*
    ** Build configuration
    */
@@ -115,6 +156,8 @@ export default {
       });
     }
   },
+
+  components: true,
 
   target: "static"
 };

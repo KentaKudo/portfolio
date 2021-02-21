@@ -1,3 +1,9 @@
+<style>
+body.home {
+  color: #868e96;
+}
+</style>
+
 <style scoped>
 .container {
   padding: 0 2rem;
@@ -13,10 +19,43 @@
     height: 100vh;
   }
 }
+
+.✍️ {
+  background-color: #343a40;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .✍️ {
+    background-color: inherit;
+    border: 2px solid #868e96;
+    top: 2rem;
+    bottom: none;
+    right: 2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.✍️:hover {
+  border: none;
+  background-color: #343a40;
+  text-decoration: none;
+}
 </style>
 
 <template>
-  <div class="container">
+  <main class="container">
+    <nuxt-link class="✍️" to="/blog">✍️</nuxt-link>
     <Navigation class="nav-bar" />
 
     <BaseSection id="about">
@@ -38,7 +77,7 @@
     <BaseSection id="awards">
       <Awards />
     </BaseSection>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -59,11 +98,11 @@ export default {
     Educations,
     Skills,
     Awards
+  },
+  head: {
+    bodyAttrs: {
+      class: "home"
+    }
   }
-  // computed: {
-  //   windowInnerWidth() {
-  //     return window.innerWidth;
-  //   }
-  // }
 };
 </script>
