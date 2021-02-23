@@ -8,6 +8,28 @@ time {
   color: #868e96;
 }
 
+nav {
+  border-radius: 0.25rem;
+}
+
+nav h6 {
+  color: #868e96;
+}
+
+nav ul {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+nav a {
+  color: #868e96;
+}
+
+nav a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
 h1 {
   font-size: 4.5rem;
   font-weight: bold;
@@ -25,6 +47,7 @@ h6 {
 img {
   width: 100%;
   height: auto;
+  margin-bottom: 2rem;
 }
 </style>
 
@@ -39,6 +62,19 @@ img {
     <h1>{{ page.title }}</h1>
     <time class="d-block mb-4">{{ formatDate(page.createdAt) }}</time>
     <p>{{ page.description }}</p>
+    <nav class="bg-light p-4 my-5">
+      <h6>Table of Contents</h6>
+      <ul class="pl-3">
+        <li
+          v-for="link of page.toc"
+          :key="link.id"
+          class="py-1"
+          :class="{ 'pl-0': link.depth == 2, 'pl-3': link.depth == 3 }"
+        >
+          <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
+        </li>
+      </ul>
+    </nav>
     <nuxt-content :document="page" />
     <hr />
     <footer class="d-flex justify-content-between">

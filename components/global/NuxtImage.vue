@@ -3,6 +3,7 @@
 </template>
 
 <script>
+// TODO: figure and caption
 export default {
   props: {
     src: String,
