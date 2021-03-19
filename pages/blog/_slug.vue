@@ -163,12 +163,12 @@ export default {
             {
               hid: "og:image",
               property: "og:image",
-              content: require(`~/assets/img${this.page.path}/${this.page.image.src}`)
+              content: `${SITE_URL}${require(`~/assets/img${this.page.path}/${this.page.image.src}`)}`
             },
             {
               hid: "twitter:image",
               name: "twitter:image",
-              content: require(`~/assets/img${this.page.path}/${this.page.image.src}`)
+              content: `${SITE_URL}${require(`~/assets/img${this.page.path}/${this.page.image.src}`)}`
             }
           ]
         : meta,
