@@ -31,9 +31,9 @@ nav a:hover {
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 3rem;
   font-weight: bold;
-  line-height: 4rem;
+  line-height: 56px;
 }
 
 h2,
@@ -44,23 +44,39 @@ h6 {
   font-weight: bold;
 }
 
+.nuxt-content h2,
+.nuxt-content h3,
+.nuxt-content h4,
+.nuxt-content h5,
+.nuxt-content h6 {
+  margin: 32px auto 16px;
+}
+
 img {
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
 }
+
+figcaption {
+  font-size: 0.75rem;
+  color: #868e96;
+}
 </style>
 
 <template>
   <article class="container">
-    <img
-      class="mb-5 d-block"
-      v-if="page.image"
-      :src="require(`~/assets/img${page.path}/${page.image.src}`)"
-      :alt="page.image.alt"
-    />
     <h1>{{ page.title }}</h1>
     <time class="d-block mb-4">{{ formatDate(page.createdAt) }}</time>
+    <figure class="mb-5">
+      <img
+        class="mb-1"
+        v-if="page.image"
+        :src="require(`~/assets/img${page.path}/${page.image.src}`)"
+        :alt="page.image.alt"
+      />
+      <figcaption class="text-center" v-html="page.image.credit" />
+    </figure>
     <p>{{ page.description }}</p>
     <nav class="bg-light p-4 my-5">
       <h6>Table of Contents</h6>
