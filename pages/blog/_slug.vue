@@ -1,69 +1,3 @@
-<style>
-.container {
-  max-width: 720px;
-  margin: 5rem auto;
-}
-
-time {
-  color: #868e96;
-}
-
-nav {
-  border-radius: 0.25rem;
-}
-
-nav h6 {
-  color: #868e96;
-}
-
-nav ul {
-  list-style-type: none;
-  margin-bottom: 0;
-}
-
-nav a {
-  color: #868e96;
-}
-
-nav a:hover {
-  color: inherit;
-  text-decoration: none;
-}
-
-h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  line-height: 56px;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
-}
-
-.nuxt-content h2,
-.nuxt-content h3,
-.nuxt-content h4,
-.nuxt-content h5,
-.nuxt-content h6 {
-  margin: 32px auto 16px;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 2rem;
-}
-
-figcaption {
-  font-size: 0.75rem;
-  color: #868e96;
-}
-</style>
-
 <template>
   <article class="container">
     <h1>{{ page.title }}</h1>
@@ -199,3 +133,70 @@ export default {
   }
 };
 </script>
+
+<style>
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+time {
+  color: #868e96;
+}
+
+nav {
+  border-radius: 0.25rem;
+}
+
+nav h6 {
+  color: #868e96;
+}
+
+nav ul {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+nav a {
+  color: #868e96;
+}
+
+nav a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 56px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+.nuxt-content h2,
+.nuxt-content h3,
+.nuxt-content h4,
+.nuxt-content h5,
+.nuxt-content h6 {
+  margin: 32px auto 16px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+figcaption {
+  font-size: 0.75rem;
+  color: #868e96;
+}
+</style>
